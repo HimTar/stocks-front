@@ -1,8 +1,8 @@
-import { Header } from "./components/common/Header/Header";
+import { memo } from "react";
+
 import Router from "./Router";
 
-import "@coreui/coreui/dist/css/coreui.min.css";
-import { memo } from "react";
+import { Header } from "./components/common/Header/Header";
 
 function AppComponent() {
   return (
