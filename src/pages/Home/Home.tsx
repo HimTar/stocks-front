@@ -3,7 +3,7 @@ import { memo, useEffect, useState } from "react";
 // import { AddPortfolio } from "../../components/portfolio/AddPortfolio";
 import { PortfolioCard } from "../../components/common/PortfolioCard/PortfolioCard";
 
-import { PortfolioApis } from "../../api";
+// import { PortfolioApis } from "../../api";
 import { Portfolio } from "../../interface";
 
 const defaultPortfolios = {
@@ -35,11 +35,11 @@ function HomeComponent() {
   }, []);
 
   const fetchPortfolios = async () => {
-    const apiResponse = await PortfolioApis.getAll();
-    if (apiResponse.isError) return;
-    setPortfolios(apiResponse.data as Portfolio[]);
+    // const apiResponse = await PortfolioApis.getAll();
+    // if (apiResponse.isError) return;
+    // setPortfolios(apiResponse.data as Portfolio[]);
 
-    // setPortfolios(defaultPortfolios.portfolios);
+    setPortfolios(defaultPortfolios.portfolios);
   };
 
   return (
