@@ -1,5 +1,5 @@
-const BASE_URL = "https://api-stocks.onrender.com";
-// const BASE_URL = "http://localhost:4000";
+// const BASE_URL = "https://api-stocks.onrender.com";
+const BASE_URL = "http://localhost:4000";
 
 const PORTFOLIO_PREFIX = "/portfolio";
 const STOCK_PREFIX = "/stock";
