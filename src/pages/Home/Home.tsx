@@ -3,29 +3,8 @@ import { memo, useEffect, useState } from "react";
 // import { AddPortfolio } from "../../components/portfolio/AddPortfolio";
 import { PortfolioCard } from "../../components/common/PortfolioCard/PortfolioCard";
 
-// import { PortfolioApis } from "../../api";
+import { PortfolioApis } from "../../api";
 import { Portfolio } from "../../interface";
-
-const defaultPortfolios = {
-  portfolios: [
-    {
-      _id: "63ed1a995ef7d69cb741896d",
-      title: "Himanshu",
-      description: "This is my first Description",
-      createdAt: "2023-02-15T17:47:05.724Z",
-      updatedAt: "2023-02-15T17:47:05.724Z",
-      __v: 0,
-    },
-    {
-      _id: "63edd1ac3efbbddc141287ce",
-      title: "Shubham",
-      description: "Shubham portfolio",
-      createdAt: "2023-02-16T06:48:12.038Z",
-      updatedAt: "2023-02-16T06:48:12.038Z",
-      __v: 0,
-    },
-  ],
-};
 
 function HomeComponent() {
   const [portfolios, setPortfolios] = useState<Portfolio[]>([]);
@@ -35,11 +14,9 @@ function HomeComponent() {
   }, []);
 
   const fetchPortfolios = async () => {
-    // const apiResponse = await PortfolioApis.getAll();
-    // if (apiResponse.isError) return;
-    // setPortfolios(apiResponse.data as Portfolio[]);
-
-    setPortfolios(defaultPortfolios.portfolios);
+    const apiResponse = await PortfolioApis.getAll();
+    if (apiResponse.isError) return;
+    setPortfolios(apiResponse.data as Portfolio[]);
   };
 
   return (
