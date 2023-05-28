@@ -11,7 +11,7 @@ import { StockApis } from "../../api";
 import { PurchaseHistory, Stock } from "../../interface";
 import { formatNumber } from "../../helper";
 import { RiDeleteBin5Line, RiEditLine } from "react-icons/ri";
-// import { AddPurchaseHistory } from "../purchaseHistory/AddPurchaseHistory";
+import { AddPurchaseHistory } from "../purchaseHistory/AddPurchaseHistory";
 
 type AddUpdateStockProps = {
   refresh: () => void;
@@ -139,7 +139,7 @@ function AddUpdateStockComponent({
         </button>
       )}
 
-      <CModal visible={visible} onClose={hide}>
+      <CModal visible={visible} onClose={hide} backdrop={"static"}>
         <CModalHeader>
           <CModalTitle>
             {" "}
@@ -194,7 +194,7 @@ function AddUpdateStockComponent({
                 )}
               </div>
 
-              {/* <AddPurchaseHistory handleSubmit={handleHistoryAdd} /> */}
+              <AddPurchaseHistory handleSubmit={handleHistoryAdd} />
             </div>
           </CModalBody>
           <CModalFooter>

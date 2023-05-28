@@ -4,7 +4,7 @@ import { RiDeleteBin5Line, RiStockLine } from "react-icons/ri";
 import { Stock, StockAnalysis } from "../../../interface";
 import { StockApis } from "../../../api";
 import { CalculateStockAnalysis, formatNumber } from "../../../helper";
-// import { AddUpdateStock } from "../../stock/AddUpdateStock";
+import { AddUpdateStock } from "../../stock/AddUpdateStock";
 
 type StockProps = {
   data: Stock;
@@ -87,12 +87,12 @@ function StockCardComponent({ data, refresh }: StockProps) {
       </div>
 
       <div className="flex flex-col gap-y-2">
-        {/* <AddUpdateStock
+        <AddUpdateStock
           variant="UPDATE"
           portfolioId={data.portfolioId}
           refresh={refresh}
           data={data}
-        /> */}
+        />
         <button className="rounded-full p-2 bg-red-500" onClick={handleDelete}>
           <RiDeleteBin5Line color="white" />
         </button>
