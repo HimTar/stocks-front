@@ -1,6 +1,6 @@
 import { memo, useEffect, useState } from "react";
 
-// import { AddPortfolio } from "../../components/portfolio/AddPortfolio";
+import { AddPortfolio } from "../../components/portfolio/AddPortfolio";
 import { PortfolioCard } from "../../components/common/PortfolioCard/PortfolioCard";
 
 import { PortfolioApis } from "../../api";
@@ -35,7 +35,7 @@ function HomeComponent() {
         </div>
       </div>
 
-      {/* <AddPortfolio refresh={fetchPortfolios} /> */}
+      <AddPortfolio refresh={fetchPortfolios} />
     </div>
   );
 }
