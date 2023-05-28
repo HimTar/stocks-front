@@ -1,7 +1,7 @@
 import { memo, useCallback, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-// import { AddUpdateStock } from "../../components/stock/AddUpdateStock";
+import { AddUpdateStock } from "../../components/stock/AddUpdateStock";
 import { StockCard } from "../../components/common/StockCard/StockCard";
 
 import { PortfolioApis } from "../../api";
@@ -74,11 +74,11 @@ function PortfolioComponent() {
           </p>
         </div>
 
-        {/* <AddUpdateStock
+        <AddUpdateStock
           variant="ADD"
           portfolioId={portfolio?._id ?? ""}
           refresh={fetchStocks}
-        /> */}
+        />
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mb-4">
