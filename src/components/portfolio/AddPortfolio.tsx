@@ -52,7 +52,7 @@ const AddPortfolioComponent = ({ refresh }: AddPortfolioProps) => {
 
   return (
     <>
-      <CButton color="success text-white" onClick={() => setVisible(!visible)}>
+      <CButton color="success" onClick={() => setVisible(!visible)}>
         Create New Portfolio
       </CButton>
       <CModal visible={visible} onClose={hide}>
@@ -85,10 +85,10 @@ const AddPortfolioComponent = ({ refresh }: AddPortfolioProps) => {
             </div>
           </CModalBody>
           <CModalFooter>
-            <CButton color="secondary text-white" onClick={hide}>
+            <CButton color="secondary" onClick={hide}>
               Close
             </CButton>
-            <CButton color="primary text-white" type="submit">
+            <CButton color="primary text-black" type="submit">
               Create
             </CButton>
           </CModalFooter>

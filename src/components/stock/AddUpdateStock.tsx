@@ -124,10 +124,7 @@ function AddUpdateStockComponent({
   return (
     <>
       {variant === "ADD" ? (
-        <CButton
-          color="success text-white"
-          onClick={() => setVisible(!visible)}
-        >
+        <CButton color="success" onClick={() => setVisible(!visible)}>
           Add New Stock
         </CButton>
       ) : (
@@ -142,7 +139,6 @@ function AddUpdateStockComponent({
       <CModal visible={visible} onClose={hide} backdrop={"static"}>
         <CModalHeader>
           <CModalTitle>
-            {" "}
             {variant === "ADD" ? "Add New Stock" : "Update Stock"}
           </CModalTitle>
         </CModalHeader>
@@ -198,10 +194,10 @@ function AddUpdateStockComponent({
             </div>
           </CModalBody>
           <CModalFooter>
-            <CButton color="secondary text-white" onClick={hide}>
+            <CButton color="secondary" onClick={hide}>
               Close
             </CButton>
-            <CButton color="primary text-white" type="submit">
+            <CButton color="primary text-black" type="submit">
               Submit
             </CButton>
           </CModalFooter>

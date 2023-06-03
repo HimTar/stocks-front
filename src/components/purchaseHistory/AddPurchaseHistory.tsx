@@ -59,7 +59,7 @@ function AddPurchaseHistoryComponent({
   return (
     <>
       <CButton
-        color="primary text-white"
+        color="primary text-black"
         type="button"
         onClick={() => setVisible(!visible)}
       >
@@ -124,11 +124,11 @@ function AddPurchaseHistoryComponent({
             </div>
           </CModalBody>
           <CModalFooter>
-            <CButton color="secondary text-white" onClick={hide}>
+            <CButton color="secondary" onClick={hide}>
               Close
             </CButton>
             <CButton
-              color="primary text-white"
+              color="primary text-black"
               type="button"
               onClick={handleSubmitEvent}
             >

@@ -59,7 +59,7 @@ function PortfolioComponent() {
 
   return (
     <div className="container flex flex-col gap-y-4">
-      <div className="flex justify-between items-center">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 mb-4">
         <div>
           <h2 className="text-xl font-bold my-4">
             {portfolio?.title || "Loading .."} {createdAt && `( ${createdAt} )`}
@@ -73,12 +73,13 @@ function PortfolioComponent() {
             </b>
           </p>
         </div>
-
-        <AddUpdateStock
-          variant="ADD"
-          portfolioId={portfolio?._id ?? ""}
-          refresh={fetchStocks}
-        />
+        <div className="flex m-auto">
+          <AddUpdateStock
+            variant="ADD"
+            portfolioId={portfolio?._id ?? ""}
+            refresh={fetchStocks}
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mb-4">
